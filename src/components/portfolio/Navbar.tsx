@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
+import { useTheme } from "next-themes";
+import { Moon, Sun } from "lucide-react";
 
-const navItems = ["About", "Work", "Contact"];
+const navItems = ["About", "Work", "Blog", "Resume", "Contact"];
 
 const Navbar = () => {
+  const { theme, setTheme } = useTheme();
+
   const scrollTo = (id: string) => {
     document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
   };
@@ -17,18 +21,27 @@ const Navbar = () => {
       <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-display text-lg font-semibold tracking-tight text-foreground">
         JD<span className="text-primary">.</span>
       </button>
-      <ul className="flex gap-8">
-        {navItems.map((item) => (
-          <li key={item}>
-            <button
-              onClick={() => scrollTo(item)}
-              className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300"
-            >
-              {item}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <div className="flex items-center gap-8">
+        <ul className="hidden md:flex gap-8">
+          {navItems.map((item) => (
+            <li key={item}>
+              <button
+                onClick={() => scrollTo(item)}
+                className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300"
+              >
+                {item}
+              </button>
+            </li>
+          ))}
+        </ul>
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors duration-300"
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
+      </div>
     </motion.nav>
   );
 };
