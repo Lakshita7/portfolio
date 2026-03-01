@@ -1,24 +1,25 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
+// TODO: add real post URLs when you publish on Substack
 const posts = [
   {
     title: "Building Design Systems That Scale",
     excerpt: "How I approach creating design tokens, component APIs, and documentation that grows with your product.",
     date: "Feb 2025",
-    url: "#",
+    url: "https://substack.com/@lakshitamalhotra",
   },
   {
-    title: "The Art of Minimal Interfaces",
-    excerpt: "Why removing features can be the most impactful design decision you make.",
-    date: "Jan 2025",
-    url: "#",
+    title: "From SaaS to SamS: Software as My Solution",
+    excerpt: "Alongside SaaS, there’s this quieter layer emerging — deeply personal software, built by individuals who understand their own constraints better than any product team ever could.",
+    date: "Feb 2026",
+    url: "https://substack.com/home/post/p-188876347",
   },
   {
-    title: "From Side Project to Production",
-    excerpt: "Lessons learned shipping a weekend project that grew to 10k users in its first month.",
-    date: "Dec 2024",
-    url: "#",
+    title: "Why Some Software Feels Inevitable",
+    excerpt: "How human-centered architecture shapes speed, simplicity, and impact!",
+    date: "Jan 2026",
+    url: "https://substack.com/home/post/p-188750976",
   },
 ];
 
@@ -34,7 +35,7 @@ const Blog = () => {
       >
         <p className="text-sm font-body text-primary tracking-widest uppercase">Blog</p>
         <a
-          href="https://substack.com"
+          href="https://substack.com/@lakshitamalhotra"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 flex items-center gap-1.5"

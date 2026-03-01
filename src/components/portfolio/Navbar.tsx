@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
-const navItems = ["About", "Work", "Blog", "Resume", "Contact"];
+const navItems = [
+  { label: "About", path: "/about" },
+  { label: "Blog", path: "/blog" },
+  { label: "Resume", path: "/resume" },
+  { label: "Contact", path: "/contact" },
+];
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
-
-  const scrollTo = (id: string) => {
-    document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <motion.nav
@@ -18,19 +20,26 @@ const Navbar = () => {
       transition={{ duration: 0.6, delay: 0.2 }}
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 bg-background/80 backdrop-blur-md"
     >
-      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="font-display text-lg font-semibold tracking-tight text-foreground">
-        JD<span className="text-primary">.</span>
-      </button>
+      <NavLink
+        to="/"
+        className="font-display text-lg font-semibold tracking-tight text-foreground"
+      >
+        LM<span className="text-primary">.</span>
+      </NavLink>
       <div className="flex items-center gap-8">
         <ul className="hidden md:flex gap-8">
-          {navItems.map((item) => (
-            <li key={item}>
-              <button
-                onClick={() => scrollTo(item)}
-                className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300"
+          {navItems.map(({ label, path }) => (
+            <li key={path}>
+              <NavLink
+                to={path}
+                className={({ isActive }) =>
+                  `text-sm font-body transition-colors duration-300 ${
+                    isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                  }`
+                }
               >
-                {item}
-              </button>
+                {label}
+              </NavLink>
             </li>
           ))}
         </ul>

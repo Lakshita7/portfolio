@@ -3,30 +3,41 @@ import { Download } from "lucide-react";
 
 const experience = [
   {
-    role: "Senior Frontend Engineer",
-    company: "Acme Corp",
-    period: "2023 — Present",
-    description: "Leading the design system team, building component libraries used across 8 product teams.",
+    role: "Software Development Engineer",
+    company: "Microtec",
+    period: "Apr 2025 — Aug 2025",
+    description: "Enhanced C++ optimization engine used by 200+ customers, improving prediction algorithms to cut material waste by 20%. Maintained C++/C#/.NET frameworks with CMake, NuGet, and Jenkins CI/CD. Improved application stability by profiling and optimizing critical C++ routines, reducing stalls by 70%.",
   },
   {
-    role: "Full Stack Developer",
-    company: "StartupXYZ",
-    period: "2021 — 2023",
-    description: "Built and shipped the core product from 0 to 50k users. React, Node.js, PostgreSQL.",
+    role: "Software Development Engineer Intern",
+    company: "Amgen",
+    period: "June 2024 — Sept 2024",
+    description: "Implemented and integrated a chatbot that reduced on-call workload by 85%. Enhanced the UI for 3,000 internal users and developed a Python-based monitoring tool for UI health and backend system integrity.",
   },
   {
-    role: "Frontend Developer",
-    company: "Digital Agency Co",
-    period: "2019 — 2021",
-    description: "Delivered 20+ client projects spanning e-commerce, SaaS dashboards, and marketing sites.",
+    role: "Cloud Engineer",
+    company: "Amazon Web Services (AWS)",
+    period: "Apr 2022 — Aug 2023",
+    description: "Provided architecture guidance and troubleshooting for Big Data services in AWS. Supervised 300+ enterprise customers to develop secure, scalable, fault-tolerant infrastructure. Collaborated with Product and Engineering teams on new features for Big Data services.",
+  },
+  {
+    role: "System Engineer",
+    company: "Tata Consultancy Services (TCS)",
+    period: "Jul 2021 — Apr 2022",
+    description: "Delivered scalable eConsent and health logging solutions for 9 major Pharma clients (e.g. Pfizer-BioNTech, Novartis) using React and Spring MVC. Built and optimized REST and web APIs, improving performance by 20% and enhancing UX for clinical trial participants.",
   },
 ];
 
 const education = [
   {
-    degree: "B.S. Computer Science",
-    school: "University of Technology",
-    year: "2019",
+    degree: "Master of Computer Science (GPA: 3.96/4.0)",
+    school: "Oregon State University, Corvallis, OR",
+    year: "Sept 2023 — Dec 2025",
+  },
+  {
+    degree: "Bachelor of Technology, Information Technology",
+    school: "Maharaja Surajmal Institute of Technology, India",
+    year: "Aug 2017 — June 2021",
   },
 ];
 
@@ -42,6 +53,7 @@ const Resume = () => {
           className="md:col-span-4"
         >
           <p className="text-sm font-body text-primary tracking-widest uppercase mb-4">Resume</p>
+          {/* TODO: add your resume PDF URL (e.g. Google Drive or hosted link) */}
           <a
             href="#"
             className="inline-flex items-center gap-2 text-sm font-body text-muted-foreground hover:text-foreground border border-border rounded-full px-4 py-2 transition-colors duration-300"

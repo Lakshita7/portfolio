@@ -21,13 +21,20 @@ const About = () => {
           className="md:col-span-8 space-y-6"
         >
           <p className="text-2xl md:text-3xl font-display font-medium leading-snug text-foreground">
-            I'm a full-stack developer with a passion for clean code, beautiful interfaces, and meaningful user experiences.
+            I'm a software engineer with experience in full-stack development, cloud infrastructure, and building systems that scale.
           </p>
           <p className="text-base font-body text-muted-foreground leading-relaxed max-w-lg">
-            With over 5 years of experience building for the web, I specialize in React, TypeScript, and modern design systems. I believe the best products are born from the overlap of empathy, craft, and technical excellence.
+            Master's in Computer Science from Oregon State (4.0 GPA). I've worked at AWS, Amgen, Microtec, and TCS—building everything from C++ optimization engines and chatbots to scalable cloud solutions and React/Spring applications. AWS Certified Solutions Architect Associate.
           </p>
           <div className="pt-6 flex flex-wrap gap-3">
-            {["React", "TypeScript", "Node.js", "Figma", "Tailwind CSS", "PostgreSQL"].map((skill) => (
+            {[
+              "C/C++", "JavaScript", "TypeScript", "C#", "Python", "Java", "Go", "SQL",
+              "React", "Vue", "Angular", "Next.js", "HTML/CSS", "Tailwind", "Redux",
+              "Node.js", "Express", "Spring Boot", "Django", "FastAPI", "REST", "GraphQL",
+              "PostgreSQL", "MongoDB", "MySQL", "Redis",
+              "AWS", "GCP", "Azure", "Docker", "Kubernetes", "Terraform", "Lambda", "EC2", "S3",
+              "Git", "CI/CD", "Jenkins", "GitHub Actions", "Linux", "Microservices",
+            ].map((skill) => (
               <span
                 key={skill}
                 className="text-xs font-body text-muted-foreground border border-border rounded-full px-4 py-1.5"

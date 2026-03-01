@@ -2,22 +2,16 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Meridian",
-    category: "Web Application",
-    description: "A project management tool built for creative teams. Real-time collaboration, kanban boards, and integrated design reviews.",
-    year: "2025",
+    title: "ConnectIT",
+    category: "Web Application (JavaScript, Node.js)",
+    description: "Real-time collaboration web application with video/audio calls via WebRTC, real-time chat, and an interactive whiteboard powered by Socket.io and Express.js.",
+    year: "—",
   },
   {
-    title: "Lumen",
-    category: "Design System",
-    description: "A comprehensive design system powering 12 products across a SaaS platform. Tokens, components, and documentation.",
-    year: "2024",
-  },
-  {
-    title: "Aura",
-    category: "Mobile App",
-    description: "A mindfulness and habit-tracking app with beautiful data visualizations and gentle nudges to build better routines.",
-    year: "2024",
+    title: "HR Portal",
+    category: "Frontend (Angular, Angular Material)",
+    description: "Secure and efficient employee data management frontend with JWT-based authentication and APIs, reducing data retrieval time by 40%.",
+    year: "—",
   },
 ];
 
